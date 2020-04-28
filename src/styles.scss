@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import "styles/variables";
+@import "styles/fonts";
+@import "styles/mixins";
+@import "styles/reset";
+@import "styles/themes";
+@import "styles/themes";
+@import "styles/themify-variables";
+
+@import "styles/components/app";
+@import "styles/components/header";
+@import "styles/components/links";
+@import "styles/components/form";

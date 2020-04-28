@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="nav container">
+    <ul class="nav-list">
+      <li *ngIf="!!(user && user.access_token)">
+        <div class="avatar">
+          <img src="{{ user.avatar }}" alt="">
+        </div>
+        {{ user.email }}
+      </li>
+      <li *ngIf="!(user && user.access_token)">
+        <a routerLink="/signup" routerLinkActive="active">Sign up</a>
+      </li>
+      <li *ngIf="!(user && user.access_token)">
+        <a routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+      <li *ngIf="!!(user && user.access_token)">
+        <a routerLink="/" routerLinkActive="active">Dashboard</a>
+      </li>
+      <li *ngIf="!!(user && user.access_token)">
+        <a (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</header>

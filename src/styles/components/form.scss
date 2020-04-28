@@ -1,0 +1,42 @@
+@import "themify-variables";
+@import "themes";
+@import "variables";
+@import "mixins";
+
+.wrapper {
+  form {
+    margin: $default-margin-elements auto;
+
+    .form-field {
+      margin: $form-field-margin;
+      label {
+        display: block;
+      }
+      .form-control {
+        background-color: $form-field-background;
+        @include themify($themes) {
+          border: 4px solid themed($textColor);
+        }
+      }
+      .form-submit {
+        @include themify($themes) {
+          &:not(:disabled) {
+            background-color: themed($submitBackground);
+            &:hover {
+              background-color: darken(themed($submitBackground), $app-darken-level);
+            }
+          }
+        }
+      }
+      .form-control, .form-submit {
+        padding: $form-control-padding;
+        min-width: $form-field-min-width;
+        @include themify($themes) {
+          color: themed($textColor);
+        }
+      }
+    }
+
+    @include flex(center, space-between, column);
+  }
+}

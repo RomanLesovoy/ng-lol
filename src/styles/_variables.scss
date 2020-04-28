@@ -1,0 +1,55 @@
+
+/*------------- GLOBALS ------------*/
+
+$primary-light: #561c56;
+$primary-dark: #382038;
+$light-color: white;
+$dark-color: black;
+$light-theme-color-secondary: blue;
+$dark-theme-color-secondary: orange;
+
+// Main colors
+$app-light-theme-background: $primary-light;
+$app-dark-theme-background: $primary-dark;
+
+$app-color-danger: #d22828;
+$app-color-info: #6363b3;
+$app-color-success: #39a039;
+$app-color-disabled: #7c7c7c;
+
+$app-darken-level: 7;
+
+// Text
+$text-light-theme-color: $dark-color;
+$text-dark-theme-color: $light-color;
+// ------------
+
+// Components
+// header
+$header-min-height: 100px;
+$header-light-theme-background: $primary-dark;
+$header-dark-theme-background: $primary-light;
+$header-avatar-width: 25px;
+$app-min-height: 100vh;
+$app-content-min-height: calc(#{$app-min-height} - #{$header-min-height});
+//
+// form
+$form-control-padding: 20px;
+$form-field-min-width: 250px;
+$form-field-background: transparent;
+$form-field-margin: 10px auto;
+$form-submit-background-theme-light: $primary-dark;
+$form-submit-background-theme-dark: $primary-light;
+// ------------
+
+// borders
+$app-default-border-size: 2px;
+$app-light-theme-default-border-color: $dark-color;
+$app-dark-theme-default-border-color: $light-color;
+//
+
+// spaces
+$default-margin-elements: 10px;
+// ------------
+
+/*------------- GLOBALS ------------*/

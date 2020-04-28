@@ -1,0 +1,17 @@
+@import "themify-variables";
+@import "themes";
+@import "variables";
+@import "mixins";
+
+.wrapper {
+  a {
+    &:active, &.active, &:hover {
+      @include themify($themes) {
+        color: themed($colorSecondary);
+        &:hover {
+          color: darken(themed($colorSecondary), $app-darken-level);
+        }
+      }
+    }
+  }
+}

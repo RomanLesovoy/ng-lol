@@ -1,0 +1,28 @@
+@import "themify-variables";
+@import "themes";
+@import "variables";
+@import "mixins";
+
+.header {
+  @include flex;
+  @include themify($themes) {
+    background-color: themed($headerBackground);
+    border-bottom: $app-default-border-size solid themed($appDefaultBorderColor);
+  }
+  min-height: $header-min-height;
+  .nav {
+    width: 100%;
+    .nav-list {
+      @include flex(center, flex-end);
+      li {
+        @include flex;
+        margin: $default-margin-elements;
+      }
+    }
+  }
+  .avatar {
+    margin-right: $default-margin-elements;
+    margin-left: $default-margin-elements;
+    width: $header-avatar-width;
+  }
+}

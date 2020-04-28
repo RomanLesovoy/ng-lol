@@ -1,0 +1,21 @@
+@import "variables";
+
+@mixin flex($align: center, $justify: space-between, $direction: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: wrap;
+}
+
+@mixin flexGrid($columns: 1, $space: 0px) {
+  flex: calc(100% / #{$columns});
+  padding: $space;
+}
+
+@mixin borders($top: none, $right: none, $bottom: none, $left: none) {
+  border-top: $top;
+  border-right: $right;
+  border-bottom: $bottom;
+  border-left: $left;
+}

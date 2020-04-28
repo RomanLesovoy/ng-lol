@@ -1,0 +1,50 @@
+<div class="login-form">
+
+  <div *ngIf="loginForm">
+    <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-field">
+        <label for="field-email">
+          <input
+            id="field-email"
+            class="form-control"
+            type="email"
+            name="email"
+            placeholder="Type email"
+            [formControlName]="emailType">
+        </label>
+        <div *ngIf="loginForm.get(emailType) && !loginForm.get(emailType).valid && loginForm.get(emailType).touched"
+             class="alert alert-danger">
+          Email is required.
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="field-password">
+          <input
+            id="field-password"
+            class="form-control"
+            type="text"
+            style="-webkit-text-security: disc;"
+            name="password"
+            autocomplete="off"
+            placeholder="Type password"
+            [formControlName]="passwordType">
+        </label>
+        <div *ngIf="loginForm.get(passwordType) && !loginForm.get(passwordType).valid && loginForm.get(passwordType).touched"
+             class="alert alert-danger">
+          Required, at least 6 symbols.
+        </div>
+      </div>
+
+      <div class="form-field">
+        <button type="submit" [disabled]="loginForm.invalid" class="form-submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="small"
+    color="orange"
+    type="pacman"
+  ></ngx-spinner>
+</div>

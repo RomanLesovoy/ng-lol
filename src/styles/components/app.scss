@@ -1,0 +1,47 @@
+@import "themify-variables";
+@import "themes";
+@import "variables";
+@import "mixins";
+
+.wrapper {
+  min-height: $app-min-height;
+  @include themify($themes) {
+    color: themed($textColor);
+    background-color: themed($appBackground);
+
+    p, h1, h2, h3, span, a {
+      color: themed($textColor);
+    }
+    p, a, span {
+      font-size: 20px;
+    }
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  .content {
+    min-height: $app-content-min-height;
+    @include flex(center, center);
+  }
+
+  .alert {
+    margin: 3px auto;
+    &.alert-danger {
+      color: $app-color-danger
+    }
+    &.alert-info {
+      color: $app-color-info
+    }
+    &.alert-success {
+      color: $app-color-success
+    }
+  }
+
+  *.disabled, *:disabled {
+    color: $app-color-disabled !important;
+    cursor: not-allowed;
+  }
+}
